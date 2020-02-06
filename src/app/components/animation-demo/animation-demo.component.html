@@ -1,0 +1,27 @@
+<h5 class="h-5">change div size</h5>
+<button class="margin-bottom" (click)="changeState()">change size</button>
+<div class="margin-bottom" [@changeSize]="sizeState"></div>
+<hr>
+<hr>
+<h5 class="h-5">Ballon effect (click on ballon)</h5>
+<div class="ballon-style" (click)="toggleBallon()" [@ballonEffect]="ballonValue"></div>
+<hr>
+<hr>
+<h5 class="h-5">Fade-in and Fade-ouit animation</h5>
+<button (click)="addItem()">Add list</button>
+<button (click)="removeItem()">Remove list</button>
+<div class="item-list-style">
+    <ul>
+        <li *ngFor="let list of listItems" [@fadeInOut]>{{ list }}</li>
+    </ul>
+</div>
+<hr>
+<hr>
+<h5 class="h-5">Enter leave effect</h5>
+<button (click)="addItem()">Add list</button>
+<button (click)="removeItem()">Remove list</button>
+<div class="item-list-style margin-bottom">
+    <ul>
+        <li *ngFor="let list of listItems" [@EnterLeave]="flyIn">{{ list }}</li>
+    </ul>
+</div>
